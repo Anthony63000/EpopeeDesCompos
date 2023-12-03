@@ -1,0 +1,19 @@
+.defenders {
+    &-dom {
+        display: flex;
+        position: absolute;
+        top: 90px;
+        left: 50%;
+        transform: translateX(-50%);
+        gap: 50px;
+    }
+
+    &-ext {
+        display: flex;
+        position: absolute;
+        bottom: 90px;
+        left: 50%;
+        transform: translateX(-50%);
+        gap: 50px;
+    }
+}

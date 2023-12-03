@@ -1,0 +1,16 @@
+
+@import "./global";
+@import "../../components/Header/header";
+@import "../../components/BannerHome/bannerHome";
+@import "../../components/Cards/cards";
+@import "../../components/Footer/footer";
+@import "../../components/Modal/modalContainer";
+@import "../../components/BannerMatch/bannerMatch";
+@import "../../components/GameContainer/gameContainer";
+@import "../../components/GameContainer/Game/game";
+@import "../../components/GameContainer/Score/score";
+@import "../../components/GameContainer/Game/goalKeeper/goalKepper";
+@import "../../components/GameContainer/Game/Player/player";
+@import "../../components/GameContainer/Game/Defenders/Defenders";
+@import "../../components/GameContainer/Game/Midfielders/midfielders";
+@import "../../components/GameContainer/Game/Forwards/forwards";

@@ -1,13 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import "./assets/styles/styles.css"
+import { Provider } from 'react-redux';
+import { store } from './Redux/store';
+import Match from './pages/Match';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <Router>
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/Match/:selectedMatch' element={<Match/>}/>
+        </Routes>
+      </Router>
+    </Provider>
   </React.StrictMode>
 );
 

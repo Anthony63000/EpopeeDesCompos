@@ -1,0 +1,105 @@
+.modalContainer {
+    background-color: rgba($color: #3A9D23, $alpha: 1);
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-modal {
+        width: 40%;
+        height: 50%;
+        border-radius: 15px;
+        padding: 25px;
+        background-color: white;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &-top {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            position: relative;
+
+            &-title {
+                font-size: 22px;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 0;
+            }
+
+            &-close {
+                font-size: 22px;
+                cursor: pointer;
+            }
+        }
+
+        &-middle {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+
+            &-text {
+                font-size: 18px;
+            }
+
+            &-bottom {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+
+                &-label {
+                    font-weight: 500;
+                }
+
+                &-select {
+                    font-size: 16px;
+                    height: 35px;
+                    width: 100%;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+        }
+
+        &-bottom {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+
+            &-danger {
+                color: red;
+            }
+
+            &-button {
+                font-size: 16px;
+                padding: 10px 20px;
+                background-color: transparent;
+                border: none;
+                box-shadow: 0 0 8px #3A9D23;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: all 300ms ease-in-out;
+                width: 100%;
+
+                &:hover {
+                    background-color: #3A9D23;
+                    color: white;
+                }
+            }
+        }
+    }
+}

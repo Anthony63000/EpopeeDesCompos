@@ -1,0 +1,39 @@
+.bannerHome {
+    margin-top: 50px;
+    padding: 0 100px;
+
+    &-container {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+
+        &-image {
+            object-fit: cover;
+            height: 50%;
+            width: 40%;
+            border-radius: 10px;
+            box-shadow: 0 0 6px white;
+        }
+
+        &-title {
+            text-align: center;
+            width: 70%;
+        }
+
+        &-link {
+            text-decoration: none;
+            color: white;
+            box-shadow: 0 0 6px black;
+            border-radius: 10px;
+            background-color: black;
+            padding: 10px 20px;
+            letter-spacing: 1px;
+            transition: all 300ms ease-in-out;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
