@@ -34,19 +34,31 @@ export default function Forwards() {
     classFormationExtElement = ""
   }
 
+  // on récupère les équipe qui joue pour leur attribuer le bon maillot
+  const maillotDom = useSelector(state => state.gameSlice.dataGame.teams[0].maillot)
+  const maillotExt = useSelector(state => state.gameSlice.dataGame.teams[1].maillot)
+
   return (
     <div className='forwards'>
       <div className={classFormationDom}>
-        {stateForwardsDom.map((_,index) => (
+        {stateForwardsDom.map((player ,index) => (
           <div className={classFormationDomElement} key={index}>
-            <Player/>
+            <Player
+              maillotSrc={process.env.PUBLIC_URL + maillotDom}
+              playerId={player.id}
+              playerName={player.name}
+            />
           </div>
         ))}
       </div>
       <div className={classFormationExt}>
-        {stateForwardsExt.map((_, index) => (
+        {stateForwardsExt.map((player, index) => (
           <div className={classFormationExtElement} key={index}>
-            <Player/>
+            <Player
+              maillotSrc={process.env.PUBLIC_URL + maillotExt}
+              playerId={player.id}
+              playerName={player.name}
+            />
           </div>
         ))}
       </div>

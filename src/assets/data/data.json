@@ -4,26 +4,59 @@
             "id": 1,
             "category": "Coupe du monde",
             "matchName": "France vs Argentine | Final de la coupe du monde 2022",
+            "description": "Le match de la finale de la Coupe du Monde de football 2022 a été un véritable spectacle. L'Argentine, à la recherche de sa troisième étoile, a pris une avance impressionnante de 2-0 avec des buts marqués par Lionel Messi sur penalty et Ángel Di María. Pendant une grande partie du match, l'équipe de France a eu du mal à trouver son rythme, mais tout a basculé dans les dernières minutes. Kylian Mbappé a transformé un penalty, changeant radicalement la dynamique du jeu. Les Bleus ont soudainement gagné en confiance et en agressivité. Mbappé a ensuite marqué un superbe but, égalisant le score à 2-2 à la fin du temps réglementaire. Dans la seconde période de la prolongation, Messi a marqué son septième but du tournoi, redonnant l'avantage à l'Argentine à 3-2. Cependant, Mbappé a encore brillé en inscrivant un penalty, devenant ainsi le meilleur buteur du tournoi. Le match s'est terminé sur un incroyable 3-3, ce qui a mené à une séance de tirs au but. Tous les tireurs argentins ont marqué, tandis qu'un arrêt crucial du gardien argentin Emiliano Martinez et un tir sur le poteau pour la France ont donné la victoire à l'Argentine 4-2 aux tirs au but. L'Argentine, emmenée par Lionel Messi, a remporté sa troisième Coupe du Monde, 36 ans après sa dernière victoire en 1986. Cette finale restera dans les annales comme un match riche en rebondissements, en moments de génie et en suspense jusqu'à la dernière seconde.",
             "score": "3 - 3",
             "teams": [
                 {
                     "name": "France",
                     "formation": "4-2-3-1",
+                    "maillot": "/image/fra.webp",
                     "players": {
-                        "goalKepper": ["Lloris"],
-                        "defenders": ["Koundé", "Varane", "Upamecano", "Hernandez"],
-                        "midfielders": ["Tchouameni", "Rabiot", "Dembélé", "Griezmann", "Mbappé"],
-                        "forwards": ["Giroud"]
+                        "goalKepper": [
+                            { "id": "f1gk1", "name": "lloris" }
+                        ],
+                        "defenders": [
+                            { "id": "f1d1", "name": "koundé" },
+                            { "id": "f1d2", "name": "varane" },
+                            { "id": "f1d3", "name": "upamecano" },
+                            { "id": "f1d4", "name": "hernandez" }
+                        ],
+                        "midfielders": [
+                            { "id": "f1m1", "name": "dembélé" },
+                            { "id": "f1m2", "name": "mbappé" },
+                            { "id": "f1m3", "name": "tchouaméni" },
+                            { "id": "f1m4", "name": "rabiot" },
+                            { "id": "f1m5", "name": "griezmann" }
+                        ],
+                        "forwards": [
+                            { "id": "f1f1", "name": "giroud" }
+                        ]
                     }
                 },
                 {
                     "name": "Argentine",
-                    "formation" : "4-3-3",
+                    "formation": "4-3-3",
+                    "maillot": "/image/argentine.webp",
                     "players": {
-                        "goalKepper": ["Martinez"],
-                        "defenders": ["Tagliafico", "Otamendi", "Romero", "Molina"],
-                        "midfielders": ["Mac Allister", "Fernandez", "De Paul"],
-                        "forwards": ["Di Maria", "Alvarez", "Messi"]
+                        "goalKepper": [
+                            { "id": "a1gk1", "name": "martinez" }
+                        ],
+                        "defenders": [
+                            { "id": "a1d1", "name": "tagliafico" },
+                            { "id": "a1d2", "name": "otamendi" },
+                            { "id": "a1d3", "name": "romero" },
+                            { "id": "a1d4", "name": "molina" }
+                        ],
+                        "midfielders": [
+                            { "id": "a1m1", "name": "mac allister" },
+                            { "id": "a1m2", "name": "fernandez" },
+                            { "id": "a1m3", "name": "de paul" }
+                        ],
+                        "forwards": [
+                            { "id": "a1f1", "name": "di maria" },
+                            { "id": "a1f2", "name": "alvarez" },
+                            { "id": "a1f3", "name": "messi" }
+                        ]
                     }
                 }
             ]
@@ -36,23 +69,54 @@
             "teams": [
                 {
                     "name": "Liverpool",
+                    "formation": "4-3-3",
                     "maillot": "",
-                    "formation" : "4-3-3",
                     "players": {
-                        "goalKepper": ["Allison"],
-                        "defenders": ["Alexander-Arnold", "Matip", "Van Dijk", "Robertson"],
-                        "midfielders": ["Henderson", "Fabinho", "Milner"],
-                        "forwards": ["Shaqiri", "Mané", "Origi"]
+                        "goalKepper": [
+                            { "id": "l1gk1", "name": "Allison" }
+                        ],
+                        "defenders": [
+                            { "id": "l1d1", "name": "Alexander-Arnold" },
+                            { "id": "l1d2", "name": "Matip" },
+                            { "id": "l1d3", "name": "Van Dijk" },
+                            { "id": "l1d4", "name": "Robertson" }
+                        ],
+                        "midfielders": [
+                            { "id": "l1m1", "name": "Henderson" },
+                            { "id": "l1m2", "name": "Fabinho" },
+                            { "id": "l1m3", "name": "Milner" }
+                        ],
+                        "forwards": [
+                            { "id": "l1f1", "name": "Shaqiri" },
+                            { "id": "l1f2", "name": "Mané" },
+                            { "id": "l1f3", "name": "Origi" }
+                        ]
                     }
                 },
                 {
                     "name": "Barcelone",
-                    "formation" : "4-4-2",
+                    "formation": "4-4-2",
+                    "maillot": "",
                     "players": {
-                        "goalKepper": ["Ter Stegen"],
-                        "defenders": ["Alba", "Lenglet", "Piqué", "Roberto"],
-                        "midfielders": ["Coutinho", "Rakitic", "Busquets", "Vidal"],
-                        "forwards": ["Suarez", "Messi"]
+                        "goalKepper": [
+                            { "id": "b1gk1", "name": "Ter Stegen" }
+                        ],
+                        "defenders": [
+                            { "id": "b1d1", "name": "Alba" },
+                            { "id": "b1d2", "name": "Lenglet" },
+                            { "id": "b1d3", "name": "Piqué" },
+                            { "id": "b1d4", "name": "Roberto" }
+                        ],
+                        "midfielders": [
+                            { "id": "b1m1", "name": "Coutinho" },
+                            { "id": "b1m2", "name": "Rakitic" },
+                            { "id": "b1m3", "name": "Busquets" },
+                            { "id": "b1m4", "name": "Vidal" }
+                        ],
+                        "forwards": [
+                            { "id": "b1f1", "name": "Suarez" },
+                            { "id": "b1f2", "name": "Messi" }
+                        ]
                     }
                 }
             ]

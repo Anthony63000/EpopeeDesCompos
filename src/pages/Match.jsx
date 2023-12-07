@@ -8,6 +8,7 @@ import data from "../assets/data/data.json";
 import GameContainer from '../components/GameContainer/GameContainer';
 import { getdataGame } from '../Redux/GameSlice/GameSlice';
 import Footer from "../components/Footer/Footer";
+import ModalContainer from '../components/Modal/ModalContainer';
 
 export default function Match() {
     const { selectedMatch } = useParams();
@@ -32,6 +33,8 @@ export default function Match() {
 
     const gameData = useSelector(state => state.gameSlice.dataGame);
 
+    const stateOfModalType = useSelector(state => state.modalSlice?.modalContainerIsVisible)
+
     return (
         <div className='app'>
             <Header />
@@ -50,6 +53,9 @@ export default function Match() {
                 )}
             </main>
             <Footer/>
+            {stateOfModalType && (
+                <ModalContainer/>
+            )}
         </div>
     );
 }

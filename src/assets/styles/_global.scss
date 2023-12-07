@@ -5,7 +5,12 @@
     font-family: 'Roboto Condensed', sans-serif;
 }
 
-.app {
+body {
     background-color:rgba($color: #3A9D23, $alpha: 0.8);
+}
+
+.app {
     color: white;
+    max-width: 1400px;
+    margin: 0 auto;
 }

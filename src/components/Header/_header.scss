@@ -1,8 +1,24 @@
+
+@import "../../assets/styles/mixin";
+
 .header {
     padding: 15px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include XL {
+        padding: 15px 50px;
+    }
+
+    @include L {
+        padding: 15px 25px;
+    }
+
+    @include M {
+        padding: 15px 20px;
+        justify-content: center;
+    }
 
     &-left {
 
@@ -14,10 +30,23 @@
                 font-weight: 900;
                 letter-spacing: 1px;
                 font-size: 28px;
+
+                @include L {
+                    font-size: 26px;
+                }
+
+                @include M {
+                    font-size: 22px;
+                }
             }
         }
     }
     &-right {
+
+        @include M {
+            display: none;
+        }
+
         &-nav {
             &-link {
                 text-decoration: none;
@@ -28,6 +57,10 @@
                 padding: 5px 15px;
                 letter-spacing: 1px;
                 transition: all 300ms ease-in-out;
+
+                @include L {
+                    font-size: 14px;
+                }
     
                 &:hover {
                     transform: scale(1.05);

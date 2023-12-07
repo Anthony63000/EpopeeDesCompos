@@ -1,7 +1,7 @@
 .modalContainer {
     background-color: rgba($color: #3A9D23, $alpha: 1);
     position: fixed;
-    z-index: 10;
+    z-index: 20;
     top: 0;
     left: 0;
     width: 100%;
@@ -21,6 +21,15 @@
         flex-direction: column;
         justify-content: space-between;
 
+        @include XL {
+            width: 70%;
+        }
+
+        @include M {
+            width: 77%;
+            padding: 20px;
+        }
+
         &-top {
             display: flex;
             align-items: center;
@@ -32,12 +41,24 @@
                 position: absolute;
                 left: 50%;
                 transform: translateX(-50%);
-                top: 0;
+                bottom: -2px;
+                text-align: center;
+                text-wrap: nowrap;
+
+                @include M {
+                    font-size: 18px;
+                    left: -10px;
+                    transform: translateX(0);
+                }
             }
 
             &-close {
                 font-size: 22px;
                 cursor: pointer;
+
+                @include M {
+                    font-size: 18px;
+                }
             }
         }
 
@@ -49,6 +70,11 @@
 
             &-text {
                 font-size: 18px;
+                text-align: center;
+
+                @include M {
+                    font-size: 16px;
+                }
             }
 
             &-bottom {
@@ -59,12 +85,21 @@
 
                 &-label {
                     font-weight: 500;
+                    
+                    @include M {
+                        font-size: 14px;
+                    }
                 }
 
                 &-select {
                     font-size: 16px;
                     height: 35px;
                     width: 100%;
+
+                    @include M {
+                        height: 25px;
+                        font-size: 14px;
+                    }
 
                     &:focus {
                         outline: none;
@@ -82,6 +117,10 @@
 
             &-danger {
                 color: red;
+
+                @include M {
+                    font-size: 14px;
+                }
             }
 
             &-button {
@@ -95,10 +134,47 @@
                 transition: all 300ms ease-in-out;
                 width: 100%;
 
+                @include M {
+                    font-size: 14px;
+                    padding: 5px 15px;
+                }
+
                 &:hover {
                     background-color: #3A9D23;
                     color: white;
                 }
+            }
+        }
+    }
+
+    &-modalMatchInfo {
+        width: 40%;
+        height: 50%;
+        border-radius: 15px;
+        padding: 25px;
+        background-color: white;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &-top {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            position: relative;
+
+            &-title {
+                position: absolute;
+                left: 50%;
+                top: 0;
+                transform: translateX(-50%);
+                font-size: 22px;
+            }
+
+            &-close {
+                cursor: pointer;
+                font-size: 22px;
             }
         }
     }

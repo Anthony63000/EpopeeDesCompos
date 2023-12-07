@@ -42,14 +42,14 @@ export default function Cards() {
             <Card
                 cardsImage={JokerImage}
                 title="Les Jokers"
-                description="Pendant le déroulement du jeu, 
-                chaque joueur bénéficiera de trois jokers pour réaliser la 
-                composition des équipes lors de ces matchs légendaires. 
-                Ces jokers sont vos alliés pour vous aider à résoudre les compositions 
-                en cas de difficulté. Utilisez-les stratégiquement pour obtenir des indices 
-                précieux sur les joueurs et leurs positions. Faites appel à ces jokers avec 
-                précaution et astuce pour avancer dans le jeu et relever le défi des 
-                compositions tactiques des plus grands matchs de football."
+                description="Pendant le déroulement du jeu, chaque joueur bénéficiera d'une utilisation 
+                illimitée des jokers pour réaliser les compositions lors de ces matchs légendaires. 
+                Ces jokers sont vos alliés pour vous aider à résoudre les compositions en cas de difficulté. 
+                Toutefois, chaque utilisation de joker entraîne une déduction de points de votre score. 
+                Utilisez-les stratégiquement pour obtenir des indices précieux sur les joueurs et leurs positions, 
+                mais gardez à l'esprit que chaque usage affectera votre score. Faites appel à ces jokers avec précaution 
+                et astuce pour avancer dans le jeu et relever le défi des compositions tactiques des 
+                plus grands matchs de football."
             />
             <Card
                 cardsImage={ScoreImage}

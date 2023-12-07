@@ -5,43 +5,94 @@
     margin-top: 50px;
     gap: 50px;
 
+    @include XL {
+        padding: 0 50px;
+    }
+
+    @include L {
+        gap: 25px;
+        padding: 0 25px;
+    }
+
+    @include M {
+        padding: 0 20px;
+    }
+
     &-row {
         display: flex;
-        justify-content: center;
-        gap: 50px;
+        justify-content: space-between;
+
+        @include L {
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+        }
 
         &-container {
+            background-color: #3A9D23;
             display: flex;
             flex-direction: column;
-            box-shadow: 0 0 8px white;
+            box-shadow: 0 0 6px white;
             border-radius: 10px;
             align-items: center;
-            width: 40%;
+            width: 43%;
             padding: 20px;
             gap: 25px;
             transition: all 300ms ease-in-out;
 
+            @include L {
+                width: 90%;
+            }
+
             &:hover {
-                background-color: rgba($color: #3A9D23, $alpha: 1.0);
+                box-shadow: 0 0 50px white;
                 transform: scale(1.05);
             }
 
             &-image {
-                width: 100%;
-                height: 345px;
+                width: 85%;
+                height: 270px;
                 border-radius: 10px;
                 box-shadow: 0 0 6px white;
+
+                @include XL {
+                    height: 230px;
+                    width: 95%;
+                }
+
+                @include L {
+                    width: 70%;
+                    height: 300px;
+                }
+
+                @include M {
+                    height: 250px;
+                    width: 80%;
+                }
+
+                @include S {
+                    height: 200px;
+                    width: 100%;
+                }
             }
 
             &-title {
                 font-size: 23px;
                 font-weight: 900;
                 text-decoration: underline;
+
+                @include M {
+                    font-size: 18px;
+                }
             }
 
             &-description {
                 text-align: center;
                 letter-spacing: 1px;
+                
+                @include M {
+                    font-size: 14px;
+                }
             }
         }
     }

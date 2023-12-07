@@ -1,6 +1,8 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import ModalChooseYourMatch from './ModalChooseYourMatch'
+import ModalMatchInfo from './ModalMatchInfo'
+import ModalGameIsFinish from './ModalGameIsFinish'
 
 export default function ModalContainer() {
 
@@ -10,6 +12,12 @@ export default function ModalContainer() {
     <div className='modalContainer'>
         {stateTypeOfModal === "chooseYourMatch" && (
            <ModalChooseYourMatch/> 
+        )}
+        {stateTypeOfModal === "matchInfo" && (
+          <ModalMatchInfo/>
+        )}
+        {stateTypeOfModal === "ModalGameIsFinish" && (
+          <ModalGameIsFinish/>
         )}
     </div>
   )

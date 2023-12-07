@@ -28,7 +28,7 @@ export default function Midfielders() {
     classFormationDomElement = ""
   }
 
-   // condition pour la formation du design au niveau des milieux de terrain pour l'équipe à l'exterieur
+  // condition pour la formation du design au niveau des milieux de terrain pour l'équipe à l'exterieur
   if(stateFormationTeamExt === "4-2-3-1") {
     classFormationExt = "midfielders-ext-4231"
     classFormationExtElement = "midfielders-ext-4231-element"
@@ -40,19 +40,32 @@ export default function Midfielders() {
     classFormationExtElement = ""
   }
 
+  // on récupère les équipe qui joue pour leur attribuer le bon maillot
+
+  const maillotDom = useSelector(state => state.gameSlice.dataGame.teams[0].maillot)
+  const maillotExt = useSelector(state => state.gameSlice.dataGame.teams[1].maillot)
+
   return (
     <div className='midfielders'>
       <div className={classFormationDom}>
-        {stateMidfieldersDom.map((_,index) => (
+        {stateMidfieldersDom.map((player ,index) => (
           <div className={classFormationDomElement} key={index}>
-            <Player/>
+            <Player
+              maillotSrc={process.env.PUBLIC_URL + maillotDom}
+              playerId={player.id}
+              playerName={player.name}
+            />
           </div>
         ))}
       </div>
       <div className={classFormationExt}>
-        {stateMidfieldersExt.map((_, index) => (
+        {stateMidfieldersExt.map((player, index) => (
           <div className={classFormationExtElement} key={index}>
-            <Player/>
+            <Player
+              maillotSrc={process.env.PUBLIC_URL + maillotExt}
+              playerId={player.id}
+              playerName={player.name}
+            />
           </div>
         ))}
       </div>

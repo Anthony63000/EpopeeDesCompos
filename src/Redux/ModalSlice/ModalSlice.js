@@ -10,8 +10,8 @@ const ModalSlice = createSlice({
     initialState,
     reducers: {
         sendModalMode : (state, action) => {
-            state.modalContainerIsVisible = !state.modalContainerIsVisible
             state.modalMode = action.payload
+            state.modalContainerIsVisible = !state.modalContainerIsVisible;
         },
     }
 })

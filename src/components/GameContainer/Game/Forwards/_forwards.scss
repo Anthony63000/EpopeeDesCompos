@@ -1,16 +1,11 @@
 .forwards {
 
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-
     &-dom {
         display: flex;
         position: absolute;
         left: 50%;
         transform: translate(-50%);
-        top: 40%;
+        top: 260px;
         gap: 100px;
     }
 
@@ -19,7 +14,7 @@
         position: absolute;
         left: 50%;
         transform: translate(-50%);
-        bottom: 40%;
+        bottom: 260px;
         gap: 100px;
     }
 }

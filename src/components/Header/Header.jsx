@@ -7,8 +7,13 @@ export default function Header() {
 
     const dispatch = useDispatch()
 
+    // On envoie via un click le type de modal que nous voulons ouvrir
     const openModalToChooseMatch = () => {
         dispatch(sendModalMode("chooseYourMatch"))
+    }
+
+    const handleOpenModalMatchInfo = () => {
+        dispatch(sendModalMode("matchInfo"))
     }
 
     const stateHeaderMode = useSelector(state => state.headerSlice.headerMode)
@@ -43,6 +48,7 @@ export default function Header() {
                     <nav className='header-right-nav'>
                         <Link 
                             className='header-right-nav-link'
+                            onClick={handleOpenModalMatchInfo}
                         >
                             Plus d'information sur ce match
                         </Link>

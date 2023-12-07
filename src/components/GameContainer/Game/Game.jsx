@@ -17,8 +17,8 @@ export default function Game() {
         <div className='game-container'>
             <GoalKepper/>
             <Defenders/>
-           <Midfielders/> 
-           <Forwards/>
+            <Midfielders/> 
+            <Forwards/>
         </div>
     </div>
   )
