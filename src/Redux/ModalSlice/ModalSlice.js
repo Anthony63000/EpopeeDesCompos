@@ -13,11 +13,15 @@ const ModalSlice = createSlice({
             state.modalMode = action.payload
             state.modalContainerIsVisible = !state.modalContainerIsVisible;
         },
+        switchModal : (state, action) => {
+            state.modalMode = action.payload
+        }
     }
 })
 
 export const {
-    sendModalMode
+    sendModalMode,
+    switchModal
 } = ModalSlice.actions
 
 export default ModalSlice.reducer

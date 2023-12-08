@@ -9,6 +9,7 @@ import GameContainer from '../components/GameContainer/GameContainer';
 import { getdataGame } from '../Redux/GameSlice/GameSlice';
 import Footer from "../components/Footer/Footer";
 import ModalContainer from '../components/Modal/ModalContainer';
+import { sendModalMode } from '../Redux/ModalSlice/ModalSlice';
 
 export default function Match() {
     const { selectedMatch } = useParams();
@@ -32,8 +33,19 @@ export default function Match() {
     }, [dispatch, matchData, selectedMatch]);
 
     const gameData = useSelector(state => state.gameSlice.dataGame);
-
     const stateOfModalType = useSelector(state => state.modalSlice?.modalContainerIsVisible)
+    const stateGameIsFinish = useSelector(state => state.gameSlice.gameIsFinish)
+
+    useEffect(() => {
+      if(stateGameIsFinish) {
+        const timer = setTimeout(() => {
+            dispatch(sendModalMode("ModalGameIsFinish"))
+        }, 500)  
+        return () => {
+            clearTimeout(timer)
+        }
+      }
+    }, [dispatch, stateGameIsFinish])
 
     return (
         <div className='app'>
@@ -52,7 +64,7 @@ export default function Match() {
                     </>
                 )}
             </main>
-            <Footer/>
+                <Footer/>
             {stateOfModalType && (
                 <ModalContainer/>
             )}

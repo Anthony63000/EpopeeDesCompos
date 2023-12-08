@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { clearPlayerSelected, errorNoInputSelected, jokerFoundFristLetter, jokerFoundPlayer, jokerIsFinish, restartGame } from '../../../Redux/GameSlice/GameSlice'
+import { sendModalMode } from '../../../Redux/ModalSlice/ModalSlice'
 
 export default function Score() {
 
+  const [disabledButton, setDisabledButton] = useState(false)
   const dispatch = useDispatch()
 
   const score = useSelector(state => state.gameSlice.score)
@@ -40,6 +42,22 @@ export default function Score() {
     dispatch(restartGame())
   }
 
+  // Ici nous allons gérer si le jeu est terminé pour afficher le bouton pour ouvrir la modal
+  const stateGameIsFinish = useSelector(state => state.gameSlice.gameIsFinish)
+
+  const handleGameIsFinish = () => {
+    dispatch(sendModalMode("ModalGameIsFinish"))
+  }
+
+  // Si la partie est fini on désactive les buttons des joker
+  useEffect(() => {
+    if(stateGameIsFinish) {
+      setDisabledButton(true)
+    } else {
+      setDisabledButton(false)
+    }
+  }, [stateGameIsFinish])
+
   return (
     <div className='score'>
         <div className='score-top'>
@@ -64,14 +82,17 @@ export default function Score() {
         </div>
         <div className='score-joker'>
           <button 
-            className='score-joker-button'
+            className={`${'score-joker-button'} ${disabledButton ? "score-joker-buttonDisabled" : ""}`}
             onClick={handleJokerFoundFirstLetter}
+            disabled={disabledButton}
           >
               Première lettre (-10pts)
           </button>
           <button 
           onClick={jokerFoundPlayerSubmit}
-          className='score-joker-button'>
+          className={`${'score-joker-button'} ${disabledButton ? "score-joker-buttonDisabled" : ""}`}
+          disabled={disabledButton}
+          >
               Nom du joueur (-20pts)
           </button>
         </div>
@@ -82,6 +103,14 @@ export default function Score() {
           >
               Recommencer
           </button>
+          {stateGameIsFinish && (
+            <button 
+            className='score-restart-button'
+            onClick={handleGameIsFinish}
+        >
+            Voir le résultat
+        </button>
+          )}
         </div>
     </div>
   )

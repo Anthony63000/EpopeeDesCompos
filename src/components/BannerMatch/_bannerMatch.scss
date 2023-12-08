@@ -4,6 +4,18 @@
     display: flex;
     justify-content: center;
 
+    @include XL {
+        padding: 0 50px;
+    }
+
+    @include L {
+        padding: 0 25px;
+    }
+
+    @include M {
+        padding: 0 20px;
+    }
+
     &-container {
         display: flex;
         flex-direction: column;
@@ -12,15 +24,40 @@
 
         &-title {
             font-size: 28px;
+            text-align: center;
+
+            @include L {
+                font-size: 24px;
+            }
+
+            @include M {
+                font-size: 22px;
+            }
         }
 
         &-category {
             font-size: 22px;
             font-weight: 500;
+
+            @include L {
+                font-size: 20px;
+            }
+
+            @include M {
+                font-size: 18px;
+            }
         }
 
         &-score {
             font-size: 18px;
+            
+            @include L {
+                font-size: 16px;
+            }
+
+            @include M {
+                font-size: 14px;
+            }
         }
     }
 }

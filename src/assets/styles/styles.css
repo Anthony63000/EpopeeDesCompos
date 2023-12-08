@@ -34,6 +34,8 @@ body {
   .header {
     padding: 15px 20px;
     justify-content: center;
+    flex-direction: column;
+    gap: 25px;
   }
 }
 .header-left-link {
@@ -53,11 +55,6 @@ body {
 @media (max-width: 600px) {
   .header-left-link-title {
     font-size: 22px;
-  }
-}
-@media (max-width: 600px) {
-  .header-right {
-    display: none;
   }
 }
 .header-right-nav-link {
@@ -380,6 +377,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  box-shadow: 0 0 6px black;
 }
 @media (max-width: 1024px) {
   .modalContainer-modal {
@@ -512,6 +510,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  box-shadow: 0 0 6px black;
 }
 .modalContainer-modalMatchInfo-top {
   display: flex;
@@ -530,12 +529,80 @@ body {
   cursor: pointer;
   font-size: 22px;
 }
+.modalContainer-modalGameIsFinish {
+  width: 40%;
+  height: 30%;
+  border-radius: 15px;
+  padding: 25px;
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 0 6px black;
+}
+.modalContainer-modalGameIsFinish-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modalContainer-modalGameIsFinish-top-title {
+  font-size: 22px;
+}
+.modalContainer-modalGameIsFinish-middle-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.modalContainer-modalGameIsFinish-middle-row-title {
+  font-size: 24px;
+  text-decoration: underline;
+}
+.modalContainer-modalGameIsFinish-middle-row-value {
+  font-size: 30px;
+  font-weight: 800;
+}
+.modalContainer-modalGameIsFinish-bottom {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.modalContainer-modalGameIsFinish-bottom-button {
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: none;
+  box-shadow: 0 0 8px #3A9D23;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+.modalContainer-modalGameIsFinish-bottom-button:hover {
+  background-color: #3A9D23;
+  color: white;
+}
 
 .bannerMatch {
   padding: 0 100px;
   margin-top: 25px;
   display: flex;
   justify-content: center;
+}
+@media (max-width: 1024px) {
+  .bannerMatch {
+    padding: 0 50px;
+  }
+}
+@media (max-width: 768px) {
+  .bannerMatch {
+    padding: 0 25px;
+  }
+}
+@media (max-width: 600px) {
+  .bannerMatch {
+    padding: 0 20px;
+  }
 }
 .bannerMatch-container {
   display: flex;
@@ -545,13 +612,44 @@ body {
 }
 .bannerMatch-container-title {
   font-size: 28px;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .bannerMatch-container-title {
+    font-size: 24px;
+  }
+}
+@media (max-width: 600px) {
+  .bannerMatch-container-title {
+    font-size: 22px;
+  }
 }
 .bannerMatch-container-category {
   font-size: 22px;
   font-weight: 500;
 }
+@media (max-width: 768px) {
+  .bannerMatch-container-category {
+    font-size: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .bannerMatch-container-category {
+    font-size: 18px;
+  }
+}
 .bannerMatch-container-score {
   font-size: 18px;
+}
+@media (max-width: 768px) {
+  .bannerMatch-container-score {
+    font-size: 16px;
+  }
+}
+@media (max-width: 600px) {
+  .bannerMatch-container-score {
+    font-size: 14px;
+  }
 }
 
 .gameContainer {
@@ -559,14 +657,28 @@ body {
   padding: 0 100px;
   margin-top: 50px;
   justify-content: space-between;
-  gap: 25px;
+  height: 678px;
+}
+@media (max-width: 1024px) {
+  .gameContainer {
+    padding: 0 50px;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    height: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .gameContainer {
+    padding: 0 20px;
+  }
 }
 
 .game {
   display: flex;
   justify-content: center;
-  width: 50%;
   position: relative;
+  width: 576px;
 }
 .game-image {
   width: 80%;
@@ -584,13 +696,19 @@ body {
 
 .score {
   border-radius: 10px;
-  width: 45%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 50px 20px;
   background-color: rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 8px black;
+  width: 35%;
+}
+@media (max-width: 1024px) {
+  .score {
+    width: 420px;
+    gap: 50px;
+  }
 }
 .score-top {
   display: flex;
@@ -651,9 +769,13 @@ body {
   color: white;
   transform: scale(1.05);
 }
+.score-joker-buttonDisabled {
+  display: none;
+}
 .score-restart {
   display: flex;
   justify-content: center;
+  gap: 15px;
 }
 .score-restart-button {
   padding: 10px 20px;

@@ -12,7 +12,6 @@ import {
   inputIsFocused,
   jokerIsFinish
 } from "../../../../Redux/GameSlice/GameSlice"; 
-import { sendModalMode } from "../../../../Redux/ModalSlice/ModalSlice";
 
 export default function Player({ maillotSrc, playerId, playerName }) {
 
@@ -73,7 +72,6 @@ export default function Player({ maillotSrc, playerId, playerName }) {
   // On défini le comportement de la fin de la partie
   useEffect(() => {
     if (playerFoundUser.length + revealedPlayerId.length === 2) {
-      dispatch(sendModalMode("ModalGameIsFinish"))
       dispatch(finishGame());
     }
   }, [dispatch, playerFoundUser.length, revealedPlayerId.length]);

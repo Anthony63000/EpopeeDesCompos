@@ -18,6 +18,8 @@
     @include M {
         padding: 15px 20px;
         justify-content: center;
+        flex-direction: column;
+        gap: 25px;
     }
 
     &-left {
@@ -42,11 +44,6 @@
         }
     }
     &-right {
-
-        @include M {
-            display: none;
-        }
-
         &-nav {
             &-link {
                 text-decoration: none;

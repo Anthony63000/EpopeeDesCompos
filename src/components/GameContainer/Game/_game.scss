@@ -1,8 +1,9 @@
 .game {
     display: flex;
     justify-content: center;
-    width: 50%;
     position: relative;
+    width: 576px;
+    
     
     &-image {
         width: 80%;

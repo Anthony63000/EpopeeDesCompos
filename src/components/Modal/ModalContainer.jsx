@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { useSelector } from 'react-redux'
 import ModalChooseYourMatch from './ModalChooseYourMatch'
 import ModalMatchInfo from './ModalMatchInfo'

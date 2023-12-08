@@ -20,6 +20,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        box-shadow: 0 0 6px black;
 
         @include XL {
             width: 70%;
@@ -157,6 +158,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        box-shadow: 0 0 6px black;
 
         &-top {
             display: flex;
@@ -175,6 +177,70 @@
             &-close {
                 cursor: pointer;
                 font-size: 22px;
+            }
+        }
+    }
+
+    &-modalGameIsFinish {
+        width: 40%;
+        height: 30%;
+        border-radius: 15px;
+        padding: 25px;
+        background-color: white;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-shadow: 0 0 6px black;
+
+        &-top {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &-title {
+                font-size: 22px;
+            }
+        }
+
+        &-middle {
+
+            &-row {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+
+                &-title {
+                    font-size: 24px;
+                    text-decoration: underline;
+                }
+
+                &-value {
+                    font-size: 30px;
+                    font-weight: 800;
+                }
+            }
+        }
+        &-bottom {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+
+            &-button {
+                font-size: 16px;
+                padding: 10px 20px;
+                background-color: transparent;
+                border: none;
+                box-shadow: 0 0 8px #3A9D23;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: all 300ms ease-in-out;
+
+                &:hover {
+                    background-color: #3A9D23;
+                    color: white;
+                }
             }
         }
     }

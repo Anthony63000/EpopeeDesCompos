@@ -2,6 +2,7 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from "react-router-dom"
 import { sendModalMode } from '../../Redux/ModalSlice/ModalSlice'
+import { restartGame } from '../../Redux/GameSlice/GameSlice'
 
 export default function Header() {
 
@@ -18,6 +19,11 @@ export default function Header() {
 
     const stateHeaderMode = useSelector(state => state.headerSlice.headerMode)
 
+    // On supprime les données du jeu quand on revient sur la page d'accueuil
+    const handleTravelToHomePage = () => {
+        dispatch(restartGame())
+    }
+
   return (
     <header>
         <div className='header'>
@@ -25,6 +31,8 @@ export default function Header() {
                 <Link 
                     className='header-left-link'
                     to={"/"}
+                    onClick={handleTravelToHomePage}
+
                 >
                     <h1 className='header-left-link-title'>
                         Épopée des Compos
