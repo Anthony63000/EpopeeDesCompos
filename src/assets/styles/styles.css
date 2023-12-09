@@ -680,12 +680,23 @@ body {
   position: relative;
   width: 576px;
 }
+@media (max-width: 600px) {
+  .game {
+    width: 100%;
+  }
+}
 .game-image {
   width: 80%;
   position: relative;
   border-radius: 10px;
   box-shadow: 0 2px 10px black;
   filter: opacity(0.5);
+}
+@media (max-width: 600px) {
+  .game-image {
+    height: 100%;
+    width: 100%;
+  }
 }
 .game-container {
   position: absolute;
@@ -721,6 +732,11 @@ body {
   font-size: 26px;
   text-decoration: underline;
 }
+@media (max-width: 600px) {
+  .score-top-title {
+    font-size: 20px;
+  }
+}
 .score-top-error {
   font-size: 18px;
   color: red;
@@ -730,6 +746,11 @@ body {
   box-shadow: 0 0 6px red;
   background-color: rgba(255, 0, 0, 0.1);
 }
+@media (max-width: 600px) {
+  .score-top-error {
+    font-size: 16px;
+  }
+}
 .score-top-firstLetter {
   font-size: 18px;
   text-align: center;
@@ -737,6 +758,11 @@ body {
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0 0 6px white;
+}
+@media (max-width: 600px) {
+  .score-top-firstLetter {
+    font-size: 16px;
+  }
 }
 .score-top-firstLetter-span {
   color: black;
@@ -749,6 +775,11 @@ body {
 }
 .score-value-description {
   font-size: 60px;
+}
+@media (max-width: 600px) {
+  .score-value-description {
+    font-size: 40px;
+  }
 }
 .score-joker {
   display: flex;
@@ -763,6 +794,12 @@ body {
   font-size: 18px;
   border-radius: 10px;
   transition: all 300ms ease-in-out;
+}
+@media (max-width: 600px) {
+  .score-joker-button {
+    font-size: 16px;
+    padding: 10px 15px;
+  }
 }
 .score-joker-button:hover {
   background-color: #3a9d23;
@@ -785,6 +822,12 @@ body {
   font-size: 18px;
   border-radius: 10px;
   transition: all 300ms ease-in-out;
+}
+@media (max-width: 600px) {
+  .score-restart-button {
+    font-size: 16px;
+    padding: 10px 15px;
+  }
 }
 .score-restart-button:hover {
   background-color: #3a9d23;
@@ -814,8 +857,18 @@ body {
   align-items: center;
   width: 50px;
 }
+@media (max-width: 600px) {
+  .player {
+    width: 15px;
+  }
+}
 .player-image {
   width: 40px;
+}
+@media (max-width: 600px) {
+  .player-image {
+    width: 20px;
+  }
 }
 .player-input {
   width: 70px;
@@ -824,6 +877,12 @@ body {
   border-right: none;
   background-color: rgba(58, 157, 35, 0.5);
   padding: 2px;
+}
+@media (max-width: 600px) {
+  .player-input {
+    width: 30px;
+    height: 10px;
+  }
 }
 .player-input:focus {
   outline: none;
@@ -846,6 +905,12 @@ body {
   transform: translateX(-50%);
   gap: 60px;
 }
+@media (max-width: 600px) {
+  .defenders-dom {
+    top: 50px;
+    gap: 50px;
+  }
+}
 .defenders-ext {
   display: flex;
   position: absolute;
@@ -853,6 +918,12 @@ body {
   left: 50%;
   transform: translateX(-50%);
   gap: 60px;
+}
+@media (max-width: 600px) {
+  .defenders-ext {
+    bottom: 50px;
+    gap: 50px;
+  }
 }
 
 .midfielders-dom {
@@ -871,6 +942,11 @@ body {
   transform: translateX(-50%);
   gap: 50px;
   position: relative;
+}
+@media (max-width: 600px) {
+  .midfielders-dom-4231 {
+    top: 140px;
+  }
 }
 .midfielders-dom-4231-element:nth-child(1) {
   position: absolute;
@@ -895,6 +971,11 @@ body {
   left: 50%;
   top: -10px;
   transform: translate(-50%);
+}
+@media (max-width: 600px) {
+  .midfielders-dom-4231-element:nth-child(5) {
+    top: -25px;
+  }
 }
 .midfielders-dom-433 {
   display: flex;
@@ -968,20 +1049,35 @@ body {
   bottom: 170px;
   left: 50%;
 }
+@media (max-width: 600px) {
+  .midfielders-ext-433 {
+    bottom: 100px;
+  }
+}
 .midfielders-ext-433-element:first-child {
   position: absolute;
   left: -120px;
   bottom: 20px;
 }
+@media (max-width: 600px) {
+  .midfielders-ext-433-element:first-child {
+    left: -80px;
+  }
+}
 .midfielders-ext-433-element:nth-child(2) {
   position: absolute;
-  left: -28px;
+  transform: translateX(-50%);
   bottom: 0px;
 }
 .midfielders-ext-433-element:nth-child(3) {
   position: absolute;
   right: -120px;
   bottom: 20px;
+}
+@media (max-width: 600px) {
+  .midfielders-ext-433-element:nth-child(3) {
+    right: -80px;
+  }
 }
 
 .forwards-dom {
@@ -992,6 +1088,11 @@ body {
   top: 260px;
   gap: 100px;
 }
+@media (max-width: 600px) {
+  .forwards-dom {
+    top: 160px;
+  }
+}
 .forwards-ext {
   display: flex;
   position: absolute;
@@ -999,4 +1100,9 @@ body {
   transform: translate(-50%);
   bottom: 260px;
   gap: 100px;
+}
+@media (max-width: 600px) {
+  .forwards-ext {
+    bottom: 150px;
+  }
 }/*# sourceMappingURL=styles.css.map */

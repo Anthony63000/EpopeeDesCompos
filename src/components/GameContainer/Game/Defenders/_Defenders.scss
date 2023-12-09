@@ -7,6 +7,11 @@
         left: 50%;
         transform: translateX(-50%);
         gap: 60px;
+
+        @include M {
+            top: 50px;
+            gap: 50px;
+        }
     }
 
     &-ext {
@@ -16,5 +21,10 @@
         left: 50%;
         transform: translateX(-50%);
         gap: 60px;
+
+        @include M {
+            bottom: 50px;
+            gap: 50px;
+        }
     }
 }

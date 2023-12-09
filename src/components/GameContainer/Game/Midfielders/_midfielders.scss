@@ -17,6 +17,10 @@
             gap: 50px;
             position: relative;
 
+            @include M {
+                top: 140px;
+            }
+
             &-element:nth-child(1) {
                 position: absolute;
                 left: 30px;
@@ -44,6 +48,10 @@
                 left: 50%;
                 top: -10px;
                 transform: translate(-50%);
+
+                @include M {
+                    top: -25px;
+                }
             }
         }
 
@@ -130,15 +138,23 @@
             bottom: 170px;
             left: 50%;
 
+            @include M {
+                bottom: 100px;
+            }
+
             &-element:first-child {
                 position: absolute;
                 left: -120px;
                 bottom: 20px;
+
+                @include M {
+                    left: -80px;
+                }
             }
 
             &-element:nth-child(2){
                 position: absolute;
-                left: -28px;
+                transform: translateX(-50%);
                 bottom: 0px;
             }
 
@@ -146,6 +162,10 @@
                 position: absolute;
                 right: -120px;
                 bottom: 20px;
+
+                @include M {
+                    right: -80px;
+                }
             }
         }
     }

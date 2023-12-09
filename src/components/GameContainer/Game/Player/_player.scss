@@ -4,8 +4,16 @@
     align-items: center;
     width: 50px;
 
+    @include M {
+        width: 15px;
+    }
+
     &-image {
         width: 40px;
+
+        @include M {
+            width: 20px;
+        }
     }
 
     &-input {
@@ -15,6 +23,11 @@
         border-right: none;
         background-color: rgba($color: #3A9D23, $alpha: 0.5);
         padding: 2px;
+
+        @include M {
+            width: 30px;
+            height: 10px;
+        }
 
         &:focus {
             outline: none;

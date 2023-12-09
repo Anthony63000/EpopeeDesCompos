@@ -23,6 +23,10 @@
         &-title {
             font-size: 26px;
             text-decoration: underline;
+
+            @include M {
+                font-size: 20px;
+            }
         }
 
         &-error {
@@ -33,6 +37,10 @@
             border-radius: 10px;
             box-shadow: 0 0 6px red;
             background-color: rgba($color: red, $alpha: 0.1);
+            
+            @include M {
+                font-size: 16px;
+            }
         }
 
         &-firstLetter {
@@ -42,6 +50,10 @@
             padding: 10px;
             border-radius: 10px;
             box-shadow: 0 0 6px white;
+
+            @include M {
+                font-size: 16px;
+            }
 
             &-span {
                 color: black;
@@ -57,6 +69,10 @@
 
         &-description {
             font-size: 60px;
+
+            @include M {
+                font-size: 40px;
+            }
         }
     }
 
@@ -73,6 +89,11 @@
             font-size: 18px;
             border-radius: 10px;
             transition: all 300ms ease-in-out;
+
+            @include M {
+                font-size: 16px;
+                padding: 10px 15px;
+            }
 
             &:hover {
                 background-color: rgba($color: #3A9D23, $alpha: 1.0);
@@ -99,6 +120,11 @@
             font-size: 18px;
             border-radius: 10px;
             transition: all 300ms ease-in-out;
+
+            @include M {
+                font-size: 16px;
+                padding: 10px 15px;
+            }
 
             &:hover {
                 background-color: rgba($color: #3A9D23, $alpha: 1.0);
