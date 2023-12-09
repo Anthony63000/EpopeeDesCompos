@@ -42,5 +42,9 @@
         font-size: 15px;
         color: black;
         font-weight: 900;
+        
+        @include M {
+            font-size: 12px;
+        }
     }
 }

@@ -24,8 +24,8 @@
                         "midfielders": [
                             { "id": "f1m1", "name": "dembélé" },
                             { "id": "f1m2", "name": "mbappé" },
-                            { "id": "f1m3", "name": "tchouaméni" },
-                            { "id": "f1m4", "name": "rabiot" },
+                            { "id": "f1m3", "name": "rabiot" },
+                            { "id": "f1m4", "name": "tchouaméni" },
                             { "id": "f1m5", "name": "griezmann" }
                         ],
                         "forwards": [

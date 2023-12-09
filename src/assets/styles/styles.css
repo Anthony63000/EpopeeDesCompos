@@ -671,6 +671,7 @@ body {
 @media (max-width: 600px) {
   .gameContainer {
     padding: 0 20px;
+    margin-top: 25px;
   }
 }
 
@@ -719,6 +720,11 @@ body {
   .score {
     width: 420px;
     gap: 50px;
+  }
+}
+@media (max-width: 600px) {
+  .score {
+    width: 80%;
   }
 }
 .score-top {
@@ -896,6 +902,11 @@ body {
   color: black;
   font-weight: 900;
 }
+@media (max-width: 600px) {
+  .player-playerName {
+    font-size: 12px;
+  }
+}
 
 .defenders-dom {
   display: flex;
@@ -952,9 +963,19 @@ body {
   position: absolute;
   left: 30px;
 }
+@media (max-width: 600px) {
+  .midfielders-dom-4231-element:nth-child(1) {
+    left: 5px;
+  }
+}
 .midfielders-dom-4231-element:nth-child(2) {
   position: absolute;
   right: 30px;
+}
+@media (max-width: 600px) {
+  .midfielders-dom-4231-element:nth-child(2) {
+    right: 5px;
+  }
 }
 .midfielders-dom-4231-element:nth-child(3) {
   position: absolute;

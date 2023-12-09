@@ -7,7 +7,7 @@ export default function GameContainer() {
   return (
     <div className='gameContainer'>
         <Game/>
-        {/*<Score/>*/}
+        <Score/>
     </div>
   )
 }
