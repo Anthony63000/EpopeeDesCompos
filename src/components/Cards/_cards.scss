@@ -50,13 +50,11 @@
             }
 
             &-image {
-                width: 85%;
-                height: 270px;
+                width: 75%;
                 border-radius: 10px;
                 box-shadow: 0 0 6px white;
 
                 @include XL {
-                    height: 230px;
                     width: 95%;
                 }
 

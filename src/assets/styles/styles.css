@@ -216,14 +216,12 @@ body {
   transform: scale(1.05);
 }
 .cards-row-container-image {
-  width: 85%;
-  height: 270px;
+  width: 75%;
   border-radius: 10px;
   box-shadow: 0 0 6px white;
 }
 @media (max-width: 1024px) {
   .cards-row-container-image {
-    height: 230px;
     width: 95%;
   }
 }
@@ -501,8 +499,8 @@ body {
   color: white;
 }
 .modalContainer-modalMatchInfo {
-  width: 40%;
-  height: 50%;
+  width: 60%;
+  height: 60%;
   border-radius: 15px;
   padding: 25px;
   background-color: white;
@@ -511,6 +509,17 @@ body {
   flex-direction: column;
   justify-content: space-between;
   box-shadow: 0 0 6px black;
+}
+@media (max-width: 1024px) {
+  .modalContainer-modalMatchInfo {
+    width: 80%;
+    height: 80%;
+  }
+}
+@media (max-width: 600px) {
+  .modalContainer-modalMatchInfo {
+    height: 90%;
+  }
 }
 .modalContainer-modalMatchInfo-top {
   display: flex;
@@ -525,13 +534,32 @@ body {
   transform: translateX(-50%);
   font-size: 22px;
 }
+@media (max-width: 600px) {
+  .modalContainer-modalMatchInfo-top-title {
+    font-size: 16px;
+    text-wrap: nowrap;
+  }
+}
 .modalContainer-modalMatchInfo-top-close {
   cursor: pointer;
   font-size: 22px;
 }
+@media (max-width: 600px) {
+  .modalContainer-modalMatchInfo-top-close {
+    font-size: 18px;
+  }
+}
+.modalContainer-modalMatchInfo-middle-content {
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .modalContainer-modalMatchInfo-middle-content {
+    font-size: 14px;
+  }
+}
 .modalContainer-modalGameIsFinish {
-  width: 40%;
-  height: 30%;
+  width: 60%;
+  height: 50%;
   border-radius: 15px;
   padding: 25px;
   background-color: white;
@@ -541,6 +569,24 @@ body {
   justify-content: space-between;
   box-shadow: 0 0 6px black;
 }
+@media (max-width: 1024px) {
+  .modalContainer-modalGameIsFinish {
+    width: 75%;
+    height: 65%;
+  }
+}
+@media (max-width: 768px) {
+  .modalContainer-modalGameIsFinish {
+    width: 85%;
+    height: 80%;
+  }
+}
+@media (max-width: 600px) {
+  .modalContainer-modalGameIsFinish {
+    width: 75%;
+    height: 50%;
+  }
+}
 .modalContainer-modalGameIsFinish-top {
   display: flex;
   justify-content: center;
@@ -548,6 +594,11 @@ body {
 }
 .modalContainer-modalGameIsFinish-top-title {
   font-size: 22px;
+}
+@media (max-width: 600px) {
+  .modalContainer-modalGameIsFinish-top-title {
+    font-size: 18px;
+  }
 }
 .modalContainer-modalGameIsFinish-middle-row {
   display: flex;
@@ -559,14 +610,29 @@ body {
   font-size: 24px;
   text-decoration: underline;
 }
+@media (max-width: 600px) {
+  .modalContainer-modalGameIsFinish-middle-row-title {
+    font-size: 20px;
+  }
+}
 .modalContainer-modalGameIsFinish-middle-row-value {
   font-size: 30px;
   font-weight: 800;
+}
+@media (max-width: 600px) {
+  .modalContainer-modalGameIsFinish-middle-row-value {
+    font-size: 24px;
+  }
 }
 .modalContainer-modalGameIsFinish-bottom {
   display: flex;
   justify-content: center;
   gap: 20px;
+}
+@media (max-width: 600px) {
+  .modalContainer-modalGameIsFinish-bottom {
+    flex-direction: column;
+  }
 }
 .modalContainer-modalGameIsFinish-bottom-button {
   font-size: 16px;
@@ -577,6 +643,11 @@ body {
   border-radius: 10px;
   cursor: pointer;
   transition: all 300ms ease-in-out;
+}
+@media (max-width: 600px) {
+  .modalContainer-modalGameIsFinish-bottom-button {
+    font-size: 14px;
+  }
 }
 .modalContainer-modalGameIsFinish-bottom-button:hover {
   background-color: #3A9D23;
@@ -683,7 +754,7 @@ body {
 }
 @media (max-width: 600px) {
   .game {
-    width: 100%;
+    width: 280px;
   }
 }
 .game-image {
@@ -724,7 +795,7 @@ body {
 }
 @media (max-width: 600px) {
   .score {
-    width: 80%;
+    width: 85%;
   }
 }
 .score-top {
@@ -803,7 +874,7 @@ body {
 }
 @media (max-width: 600px) {
   .score-joker-button {
-    font-size: 16px;
+    font-size: 14px;
     padding: 10px 15px;
   }
 }
@@ -831,7 +902,7 @@ body {
 }
 @media (max-width: 600px) {
   .score-restart-button {
-    font-size: 16px;
+    font-size: 14px;
     padding: 10px 15px;
   }
 }

@@ -60,66 +60,6 @@
                     }
                 }
             ]
-        },
-        {
-            "id": 2,
-            "category": "Ligue des champions",
-            "matchName": "Liverpool vs Barcelone | Retour Demi-finales ligue des champions 2019",
-            "score": "4 - 0",
-            "teams": [
-                {
-                    "name": "Liverpool",
-                    "formation": "4-3-3",
-                    "maillot": "",
-                    "players": {
-                        "goalKepper": [
-                            { "id": "l1gk1", "name": "Allison" }
-                        ],
-                        "defenders": [
-                            { "id": "l1d1", "name": "Alexander-Arnold" },
-                            { "id": "l1d2", "name": "Matip" },
-                            { "id": "l1d3", "name": "Van Dijk" },
-                            { "id": "l1d4", "name": "Robertson" }
-                        ],
-                        "midfielders": [
-                            { "id": "l1m1", "name": "Henderson" },
-                            { "id": "l1m2", "name": "Fabinho" },
-                            { "id": "l1m3", "name": "Milner" }
-                        ],
-                        "forwards": [
-                            { "id": "l1f1", "name": "Shaqiri" },
-                            { "id": "l1f2", "name": "Mané" },
-                            { "id": "l1f3", "name": "Origi" }
-                        ]
-                    }
-                },
-                {
-                    "name": "Barcelone",
-                    "formation": "4-4-2",
-                    "maillot": "",
-                    "players": {
-                        "goalKepper": [
-                            { "id": "b1gk1", "name": "Ter Stegen" }
-                        ],
-                        "defenders": [
-                            { "id": "b1d1", "name": "Alba" },
-                            { "id": "b1d2", "name": "Lenglet" },
-                            { "id": "b1d3", "name": "Piqué" },
-                            { "id": "b1d4", "name": "Roberto" }
-                        ],
-                        "midfielders": [
-                            { "id": "b1m1", "name": "Coutinho" },
-                            { "id": "b1m2", "name": "Rakitic" },
-                            { "id": "b1m3", "name": "Busquets" },
-                            { "id": "b1m4", "name": "Vidal" }
-                        ],
-                        "forwards": [
-                            { "id": "b1f1", "name": "Suarez" },
-                            { "id": "b1f2", "name": "Messi" }
-                        ]
-                    }
-                }
-            ]
         }
     ]
 }

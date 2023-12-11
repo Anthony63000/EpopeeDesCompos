@@ -149,8 +149,8 @@
     }
 
     &-modalMatchInfo {
-        width: 40%;
-        height: 50%;
+        width: 60%;
+        height: 60%;
         border-radius: 15px;
         padding: 25px;
         background-color: white;
@@ -159,6 +159,15 @@
         flex-direction: column;
         justify-content: space-between;
         box-shadow: 0 0 6px black;
+
+        @include XL {
+            width: 80%;
+            height: 80%;
+        }
+
+        @include M {
+            height: 90%;
+        }
 
         &-top {
             display: flex;
@@ -172,18 +181,38 @@
                 top: 0;
                 transform: translateX(-50%);
                 font-size: 22px;
+
+                @include M {
+                    font-size: 16px;
+                    text-wrap: nowrap;
+                }
             }
 
             &-close {
                 cursor: pointer;
                 font-size: 22px;
+
+                @include M {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        &-middle {
+            
+            &-content {
+                text-align: center;
+
+                @include M {
+                    font-size: 14px;
+                }
             }
         }
     }
 
     &-modalGameIsFinish {
-        width: 40%;
-        height: 30%;
+        width: 60%;
+        height: 50%;
         border-radius: 15px;
         padding: 25px;
         background-color: white;
@@ -193,6 +222,21 @@
         justify-content: space-between;
         box-shadow: 0 0 6px black;
 
+        @include XL {
+            width: 75%;
+            height: 65%;
+        }
+
+        @include L {
+            width: 85%;
+            height: 80%;
+        }
+
+        @include M {
+            width: 75%;
+            height: 50%;
+        }
+
         &-top {
             display: flex;
             justify-content: center;
@@ -200,6 +244,10 @@
 
             &-title {
                 font-size: 22px;
+
+                @include M {
+                    font-size: 18px;
+                }
             }
         }
 
@@ -214,11 +262,19 @@
                 &-title {
                     font-size: 24px;
                     text-decoration: underline;
+
+                    @include M {
+                        font-size: 20px;
+                    }
                 }
 
                 &-value {
                     font-size: 30px;
                     font-weight: 800;
+
+                    @include M {
+                        font-size: 24px;
+                    }
                 }
             }
         }
@@ -226,6 +282,10 @@
             display: flex;
             justify-content: center;
             gap: 20px;
+
+            @include M {
+                flex-direction: column;
+            }
 
             &-button {
                 font-size: 16px;
@@ -236,6 +296,10 @@
                 border-radius: 10px;
                 cursor: pointer;
                 transition: all 300ms ease-in-out;
+
+                @include M {
+                    font-size: 14px;
+                }
 
                 &:hover {
                     background-color: #3A9D23;
