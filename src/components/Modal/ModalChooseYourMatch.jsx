@@ -76,7 +76,7 @@ export default function ModalChooseYourMatch() {
                 value={selectedCategory}
                 onChange={handleCategoryChange}
               >
-              <option value="" selected>Toutes</option>
+              <option value="">Toutes</option>
                 {matchsOption.map((match, index) => (
                   <option key={index} value={match.category}>
                     {match.category}
@@ -95,7 +95,7 @@ export default function ModalChooseYourMatch() {
                 value={selectedMatch}
                 onChange={handleMatchChange}
               >
-              <option value="" disabled selected>Sélectionnez un match</option>
+              <option value="">Sélectionnez un match</option>
                 {filteredMatchsByCategory.map((match, index) => (
                   <option key={index} value={match.matchName}>
                     {match.matchName}
