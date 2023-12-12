@@ -71,7 +71,7 @@ export default function Player({ maillotSrc, playerId, playerName }) {
 
   // On défini le comportement de la fin de la partie
   useEffect(() => {
-    if (playerFoundUser.length + revealedPlayerId.length === 2) {
+    if (playerFoundUser.length + revealedPlayerId.length === 22) {
       dispatch(finishGame());
     }
   }, [dispatch, playerFoundUser.length, revealedPlayerId.length]);
